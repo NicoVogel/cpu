@@ -36,7 +36,7 @@ FLAG :	000	CF		; Carry flag
 		
 Command
 
-hex	Bin 		type	Name	Info				Comment
+hex	Bin 		type	Name	Param				Comment
 00	00000000	CC10    NOP     
 01	00000001	CC1     ADD     R1 , R2             ; R1 = R1 + R2
 02	00000010	CC2     ADD     R1 , R2 , R3        ; R3 = R1 + R2
