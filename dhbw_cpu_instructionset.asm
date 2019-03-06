@@ -26,8 +26,9 @@ FLAG :	000		CF
 		111		Zero
 		
 		
-Befehle
+Command
 
+hex	Binary			Name	Info				Comment
 00	0000 0000		NOP		
 01	0000 0001		ADD		R1 + R2 = R1
 02	0000 0010		ADD		R1 + R2 = R3
@@ -143,90 +144,22 @@ fe	1111 1110		befehls ende				;der nächste befehl wird geladen -> nur für das 
 ff	1111 1111		END							;stop die cpu
 
 
-CALL adresse
-01	SAV S1,SP,
-02	SAV 
-
-RET	
 
 
 
-Code aufbau
-	Befehl		R1		R2		R3 oder Z
-	0000 0000	0000	0000	0000 0000		= 24 bit
-	R3 ist der bereich von dem bit 0-3
+Code combinations
+	Command		R1	R2
+	8			4	4				= 16 Bit
+	
+	Command		R1	R2		-	R3
+	8			4	4		4	4	= 24 Bit
+	
+	Command		-	R1		Number
+	8			4	4		8		= 24 Bit
 
-	
-	
-ALU-ROM
-	1-4 ->	Baustein wahl
-	
-	5	->	CF,OF Flag verwalten	0=beibehalten | 1=ändern
-	6	->	MSB,LSB FLAG verwalten	0=beibehalten | 1=ändern
-	7	->	<,=,> FLAG verwalten	0=beibehalten | 1=ändern
-	8	->	Zero Flag verwalten		0=beibehalten | 1=ändern
-	
-	9	->	Flag (<,=,>) änderung wählen zwischen 0=CMP und 1=CMPV
-	A	->	Wählt segment aus für die dazugehörigen Flag werte (0=add oder 1=sub segment)
-	B	->	Cin wird gesetzt, kann auch gewählt werden mit dem 'A' bit
-	C	->	unbeschrieben
+	Command		R1	R2		Number
+	8			4	4		8		= 24 Bit
 
-	Befehl	Adresse		Output-Bin		Output-hex
-	nop		0000		0000 0000 1111	00f
-	add		0001		0000 1010 0000	0a0
-	sub		0010		0010 1010 0001	2a1
-	adc		0011		0000 1011 0000	0b0
-	sbb		0100		0010 1011 0001	2b1
-	inc		0101		0100 1010 0000	4a0
-	dec		0110		0110 1010 0001	6a1
-	and		0111		0000 1000 0010	082
-	or		1000		0000 1000 0011	083
-	xor		1001		0000 1000 0100	084
-	not		1010		0000 1000 0101	085
-	shl		1011		0000 1000 0110	086
-	shr		1100		0000 1000 0111	087
-	cmp		1101		0000 0100 1000	048
-	cmpv	1110		0001 0100 1001	149
-
-
-Steuerwerk Command ROM
-	0-7		Steuerbus
-	8-11	ALU-ROM
-	12-15	Stack / ROM
-	16-23	Steuerwerk wiring
-	24-31	Bus wiring
-	
-	
-Steuerwerk code:
-	0-3 	für alu 
-	4-7		Save adresse
-	8-11	Load A adresse
-	12-15	Load B adresse
-	16-19	Load C address
-	20-23	stack / ROM	-> 0001 = push || 0010 = pop || 0100 = ROM
-	
-steuerwerk bus code:
-	0-3		Speicher in
-	4-7		Rechenwerk in A
-	8-11	Rechenwerk in B
-	12-15	Stack / ROM in
-	16-19	Steuerwerk in A
-	20-23	Steuerwerk in B
-	24-27	Datenbus out
-	
-steuerwerk bus code: input reihenfolge
-	0		nothing
-	1		Datenbus in
-	2		Steuerwerk out
-	3		Speicher A out
-	4		Speicher B out
-	5		Speicher C out
-	6		Rechenwerk out
-	7		Stack / ROM out
 	
 
 	
-Steurbus aufbau:
-	Bit		Bezeichnung		Definizion
-	0-3		SL				Befehl
-	4-7		SH				Bauteil Addresse
