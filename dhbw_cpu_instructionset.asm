@@ -19,6 +19,7 @@ Register
 	1011	sph (stack pointer high)		; used for stack operations like push and pop
 	1100	ipl	(instruction pointer low)	; used to read the code
 	1101	iph (instruction pointer high)	; used to read the code
+	1110	oid (output id)					; used to store the receiving component id
 	1111	flag
 
 		Bit ID
