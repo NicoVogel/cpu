@@ -140,6 +140,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#ffffff" height="30" stroke="#000000" stroke-width="2" width="120" x="90" y="80"/>
+      <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="149" y="97">ALU</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="160" y="108">Out</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="196" y="102">Flag_Out</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="180" y="107">Flag_In</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="100" y="107">A</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="120" y="107">B</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="140" y="107">Code</text>
+      <circ-port height="8" pin="180,70" width="8" x="96" y="106"/>
+      <circ-port height="8" pin="180,110" width="8" x="116" y="106"/>
+      <circ-port height="8" pin="180,150" width="8" x="176" y="106"/>
+      <circ-port height="8" pin="180,200" width="8" x="136" y="106"/>
+      <circ-port height="10" pin="700,120" width="10" x="195" y="105"/>
+      <circ-port height="10" pin="700,220" width="10" x="155" y="105"/>
+      <circ-anchor facing="east" height="6" width="6" x="127" y="107"/>
+    </appear>
     <wire from="(610,170)" to="(610,180)"/>
     <wire from="(640,480)" to="(640,490)"/>
     <wire from="(590,190)" to="(590,200)"/>
@@ -566,6 +583,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#ffffff" height="30" stroke="#000000" stroke-width="2" width="120" x="130" y="70"/>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="239" y="98">Out</text>
+      <path d="M136,99 Q140,91 144,99" fill="none" stroke="#808080" stroke-width="2"/>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="160" y="97">Code</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="180" y="97">Data</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="200" y="97">High</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="220" y="96">Low</text>
+      <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="189" y="89">RAM</text>
+      <circ-port height="8" pin="170,70" width="8" x="216" y="96"/>
+      <circ-port height="8" pin="170,100" width="8" x="196" y="96"/>
+      <circ-port height="8" pin="170,130" width="8" x="176" y="96"/>
+      <circ-port height="8" pin="170,160" width="8" x="136" y="96"/>
+      <circ-port height="8" pin="170,190" width="8" x="156" y="96"/>
+      <circ-port height="10" pin="420,110" width="10" x="235" y="95"/>
+      <circ-anchor facing="east" height="6" width="6" x="187" y="97"/>
+    </appear>
     <wire from="(180,100)" to="(180,110)"/>
     <wire from="(310,150)" to="(310,160)"/>
     <wire from="(300,180)" to="(300,190)"/>
@@ -655,6 +689,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#ffffff" height="30" stroke="#000000" stroke-width="2" width="160" x="70" y="90"/>
+      <path d="M76,119 Q80,111 84,119" fill="none" stroke="#808080" stroke-width="2"/>
+      <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="150" y="106">Register</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="100" y="117">Flag_In</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="119" y="112">Flag_Out</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="139" y="118">Code</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="160" y="118">In</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="181" y="118">Out A</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="201" y="118">Out B</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="220" y="118">Out C</text>
+      <circ-port height="8" pin="100,30" width="8" x="76" y="116"/>
+      <circ-port height="8" pin="160,60" width="8" x="156" y="116"/>
+      <circ-port height="8" pin="120,110" width="8" x="136" y="116"/>
+      <circ-port height="8" pin="180,980" width="8" x="96" y="116"/>
+      <circ-port height="10" pin="1010,970" width="10" x="115" y="115"/>
+      <circ-port height="10" pin="530,60" width="10" x="175" y="115"/>
+      <circ-port height="10" pin="720,60" width="10" x="195" y="115"/>
+      <circ-port height="10" pin="910,60" width="10" x="215" y="115"/>
+      <circ-anchor facing="east" height="6" width="6" x="147" y="117"/>
+    </appear>
     <wire from="(300,930)" to="(360,930)"/>
     <wire from="(490,370)" to="(680,370)"/>
     <wire from="(670,170)" to="(670,310)"/>
@@ -1047,5 +1102,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(640,170)" name="Pull Resistor">
       <a name="facing" val="north"/>
     </comp>
+  </circuit>
+  <circuit name="CPU">
+    <a name="circuit" val="CPU"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <comp loc="(90,140)" name="RAM">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(270,120)" name="ALU">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(180,70)" name="Register"/>
   </circuit>
 </project>
